@@ -1,44 +1,20 @@
-# Explorer App 🌍 (Unidad 2 - Vanilla TypeScript)
+# Explorer App - Migración a React (Sesión 24)
 
-## 📌 Propósito del Proyecto
-Aplicación web modular desarrollada para explorar y consultar información detallada de países del mundo, construida para cumplir con los requerimientos académicos de la Unidad 2 utilizando arquitecturas limpias y Vanilla TypeScript.
+Aplicación web para explorar información de países del mundo, migrada de Vanilla TypeScript a **React 18** utilizando componentes funcionales, JSX y props tipadas.
 
-## 🚀 Stack Tecnológico
-- **Core:** TypeScript (Tipado estricto sin uso de `any`)
-- **Estilos:** Tailwind CSS v4 (`@tailwindcss/vite`)
-- **Empaquetador:** Vite
-- **Control de Versiones:** Git y GitHub (Etiquetado con `vanilla-u2`)
+## Stack Tecnológico
+- **React 18** (`react@18`, `react-dom@18`)
+- **TypeScript**
+- **Vite**
+- **Tailwind CSS v4** (`@tailwindcss/vite`)
 
-## 🛠️ Requisitos Previos y Comandos de Ejecución
-1. **Node.js** instalado en el sistema.
-2. Gestor de paquetes **pnpm** instalado globalmente.
+## Requisitos Previos
+- **Node.js**: v22.12 o superior
+- **Gestor de paquetes**: `pnpm`
 
-Comandos para su ejecución local:
-\`\`\`bash
-# Instalar dependencias
-pnpm install
+## Comandos de Instalación y Ejecución
 
-# Iniciar el entorno de desarrollo local (Vite)
-pnpm dev
-
-# Compilar para producción
-pnpm build
-\`\`\`
-
-## 📂 Estructura de Carpetas
-- `src/api/`: Capa de consumo de datos asíncronos (`fetch`).
-- `src/types/`: Contratos de interfaces tipadas.
-- `src/utils/`: Funciones puras, utilerías y control de *debounce* (300 ms).
-- `src/render/`: Manipulación dinámica del DOM y gestión de estados visuales.
-
-## 🗄️ Fuente de Datos
-- **API Rest Countries** (Consumo de endpoints públicos de países, regiones y capitales).
-
-## ✨ Funcionalidades Clave
-- **Filtros Combinados:** Búsqueda reactiva por texto integrada de manera simultánea con el selector de regiones.
-- **Gestión de Estados:** Manejo visual para estados de carga, resultados vacíos y errores de red.
-- **Accesibilidad Web:** Navegación optimizada por teclado mediante estados `focus-visible`.
-
-## ⚠️ Limitaciones y Pendientes
-- **Limitaciones:** Dependencia de la disponibilidad de la API externa de Rest Countries.
-- **Pendientes:** Migración de componentes hacia React 18 en la siguiente fase de la Unidad 3.
+1. Clonar el repositorio e ingresar al directorio:
+   ```bash
+   git clone [https://github.com/odelibernal503-png/explorer-react.git](https://github.com/odelibernal503-png/explorer-react.git)
+   cd explorer-react
