@@ -1,44 +1,10 @@
-# Explorer App 🌍 (Unidad 2 - Vanilla TypeScript)
+Explorer App (React Migration) - Sesión 24
+Aplicación web desarrollada para explorar información de países, migrada exitosamente de Vanilla TypeScript a un entorno moderno con React, Vite y Tailwind CSS v4. 
 
-## 📌 Propósito del Proyecto
-Aplicación web modular desarrollada para explorar y consultar información detallada de países del mundo, construida para cumplir con los requerimientos académicos de la Unidad 2 utilizando arquitecturas limpias y Vanilla TypeScript.
+  🚀 Stack TecnológicoReact 19 / 18 (Componentes funcionales y tipado de props)TypeScript (Tipado estricto y robusto para datos geográficos)Tailwind CSS v4 (Estilos modernos y adaptativos con @tailwindcss/vite)Vite (Herramienta de empaquetado y desarrollo ultrarrápida)📋 Requisitos PreviosAsegúrate de tener instalado en tu equipo:Node.js (Versión 18 o superior recomendada)pnpm (Gestor de paquetes recomendado)⚙️ Comandos de Instalación y Ejecución Instalar las dependencias:pnpm install
 
-## 🚀 Stack Tecnológico
-- **Core:** TypeScript (Tipado estricto sin uso de `any`)
-- **Estilos:** Tailwind CSS v4 (`@tailwindcss/vite`)
-- **Empaquetador:** Vite
-- **Control de Versiones:** Git y GitHub (Etiquetado con `vanilla-u2`)
+Ejecutar el servidor de desarrollo:pnpm run dev
+Generar el build de producción:pnpm run build 
 
-## 🛠️ Requisitos Previos y Comandos de Ejecución
-1. **Node.js** instalado en el sistema.
-2. Gestor de paquetes **pnpm** instalado globalmente.
-
-Comandos para su ejecución local:
-\`\`\`bash
-# Instalar dependencias
-pnpm install
-
-# Iniciar el entorno de desarrollo local (Vite)
-pnpm dev
-
-# Compilar para producción
-pnpm build
-\`\`\`
-
-## 📂 Estructura de Carpetas
-- `src/api/`: Capa de consumo de datos asíncronos (`fetch`).
-- `src/types/`: Contratos de interfaces tipadas.
-- `src/utils/`: Funciones puras, utilerías y control de *debounce* (300 ms).
-- `src/render/`: Manipulación dinámica del DOM y gestión de estados visuales.
-
-## 🗄️ Fuente de Datos
-- **API Rest Countries** (Consumo de endpoints públicos de países, regiones y capitales).
-
-## ✨ Funcionalidades Clave
-- **Filtros Combinados:** Búsqueda reactiva por texto integrada de manera simultánea con el selector de regiones.
-- **Gestión de Estados:** Manejo visual para estados de carga, resultados vacíos y errores de red.
-- **Accesibilidad Web:** Navegación optimizada por teclado mediante estados `focus-visible`.
-
-## ⚠️ Limitaciones y Pendientes
-- **Limitaciones:** Dependencia de la disponibilidad de la API externa de Rest Countries.
-- **Pendientes:** Migración de componentes hacia React 18 en la siguiente fase de la Unidad 3.
+Utilidades reutilizadas de Vanilla TS:
+Para mantener la coherencia y aprovechar el trabajo previo de la Unidad 2, se reutilizaron y adaptaron las estructuras de tipado base (src/types/country.ts) y las funciones de formateo numérico y de textos (src/utils/format.ts), permitiendo que el tipado estricto de TypeScript funcione de manera fluida en los nuevos componentes de React.
