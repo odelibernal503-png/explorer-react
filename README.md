@@ -1,10 +1,14 @@
-Explorer App (React Migration) - Sesión 24
-Aplicación web desarrollada para explorar información de países, migrada exitosamente de Vanilla TypeScript a un entorno moderno con React, Vite y Tailwind CSS v4. 
+# Explorer App - Sesión 25
 
-  🚀 Stack TecnológicoReact 19 / 18 (Componentes funcionales y tipado de props)TypeScript (Tipado estricto y robusto para datos geográficos)Tailwind CSS v4 (Estilos modernos y adaptativos con @tailwindcss/vite)Vite (Herramienta de empaquetado y desarrollo ultrarrápida)📋 Requisitos PreviosAsegúrate de tener instalado en tu equipo:Node.js (Versión 18 o superior recomendada)pnpm (Gestor de paquetes recomendado)⚙️ Comandos de Instalación y Ejecución Instalar las dependencias:pnpm install
+## Avance de la sesión
+En esta sesión migramos la aplicación a React utilizando la metodología de **Atomic Design** y TypeScript, asegurando un tipado estricto de las interfaces.
 
-Ejecutar el servidor de desarrollo:pnpm run dev
-Generar el build de producción:pnpm run build 
+## Documentación de Componentes
+**CountryGrid**
+* **¿Qué hace?** Se encarga de renderizar la cuadrícula completa de tarjetas de países. Utiliza el método `.map()` para iterar sobre la lista de datos y generar dinámicamente un componente `CountryCard` por cada elemento.
+* **¿Qué recibe por props?** Recibe un arreglo de objetos `Country` llamado `countries` y una función callback llamada `onSelect` que se propaga a cada tarjeta hija.
 
-Utilidades reutilizadas de Vanilla TS:
-Para mantener la coherencia y aprovechar el trabajo previo de la Unidad 2, se reutilizaron y adaptaron las estructuras de tipado base (src/types/country.ts) y las funciones de formateo numérico y de textos (src/utils/format.ts), permitiendo que el tipado estricto de TypeScript funcione de manera fluida en los nuevos componentes de React.
+Verificar que compile sin errores (Build): pnpm run build
+
+para ejecutar: pnpm run dev
+
