@@ -1,6 +1,7 @@
 import { useState, type JSX } from 'react';
 import { Header } from './components/organisms/Header';
 import { CountryGrid } from './components/organisms/CountryGrid';
+import { SearchBar } from './components/organisms/SearchBar';
 import { RegionFilter } from './components/organisms/RegionFilter';
 import { countriesDemo } from './data/countries-demo';
 import { filterCountries } from './utils/filter';
@@ -10,7 +11,6 @@ export function App(): JSX.Element {
   const [query, setQuery] = useState<string>('');
   const [region, setRegion] = useState<string>('');
 
-  // Resultado derivado: se calcula en cada render a partir de los estados y la colección original
   const filteredCountries: Country[] = filterCountries(
     countriesDemo,
     query,
@@ -34,7 +34,6 @@ export function App(): JSX.Element {
 
       <main className="py-8">
         <div className="container mx-auto px-4 md:px-8">
-          {/* Sección superior de búsqueda y filtros */}
           <section className="mb-12">
             <h2 className="text-2xl font-bold">Explora países del mundo</h2>
             <p className="mt-1 text-sm text-neutral-600 dark:text-neutral-400">
@@ -42,21 +41,10 @@ export function App(): JSX.Element {
             </p>
 
             <div className="mt-6 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
-              <div className="relative w-full sm:w-96">
-                <input
-                  type="search"
-                  value={query}
-                  onChange={(e) => setQuery(e.target.value)}
-                  placeholder="Escriba el nombre del país..."
-                  className="w-full rounded-lg border border-neutral-300 bg-white px-4 py-3 pl-11 text-sm text-neutral-900 shadow-xs focus:outline-none focus:ring-2 focus:ring-orange-400 dark:border-slate-700 dark:bg-slate-900 dark:text-white"
-                />
-                <span className="absolute left-4 top-3.5 text-neutral-400">🔍</span>
-              </div>
-              
+              <SearchBar value={query} onChange={setQuery} />
               <RegionFilter value={region} onChange={setRegion} />
             </div>
 
-            {/* Contador de resultados y opción de limpiar filtros */}
             <div className="mt-4 flex items-center justify-between text-sm text-neutral-600 dark:text-neutral-400">
               <span>Resultados encontrados: {filteredCountries.length} país(es)</span>
               {(query !== '' || region !== '') && (
@@ -70,7 +58,6 @@ export function App(): JSX.Element {
             </div>
           </section>
 
-          {/* Sección del Grid de Países o Mensaje de Sin Coincidencias */}
           <section>
             <h2 className="mb-6 text-xl font-bold">Países recomendados</h2>
             {filteredCountries.length > 0 ? (
