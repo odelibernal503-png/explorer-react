@@ -40,9 +40,14 @@ export function App(): JSX.Element {
               Busca un país o filtra por región para consultar su información
             </p>
 
-            <div className="mt-6 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
-              <SearchBar value={query} onChange={setQuery} />
-              <RegionFilter value={region} onChange={setRegion} />
+            {/* Contenedor equilibrado que abarca todo el ancho */}
+            <div className="mt-6 flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
+              <div className="w-full md:flex-1 md:mr-6">
+                <SearchBar value={query} onChange={setQuery} />
+              </div>
+              <div className="w-full md:w-72">
+                <RegionFilter value={region} onChange={setRegion} />
+              </div>
             </div>
 
             <div className="mt-4 flex items-center justify-between text-sm text-neutral-600 dark:text-neutral-400">
